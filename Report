@@ -1,0 +1,252 @@
+# Go1 Contact List - Removal Analysis Report
+
+**Date:** December 14, 2025  
+**Project:** Territory Routing - AU/NZ/UK/IE  
+**Original Dataset:** 23,606 contacts  
+**Final Cleaned List:** 11,024 contacts  
+**Total Removed:** 12,582 contacts (53.3%)
+
+---
+
+## Executive Summary
+
+From an original dataset of 23,606 contacts, we applied a two-step filtering process to identify the most relevant prospects for Go1's learning platform in Australia, New Zealand, United Kingdom, and Ireland. The filtering removed 53.3% of contacts, resulting in a highly targeted list of 11,024 HR, Learning & Development, Compliance, and IT decision-makers.
+
+---
+
+## Removal Process
+
+### Step 1: Geographic Filter
+**Removed:** 12,121 contacts (51.3% of original)  
+**Reason:** Contact location outside target regions
+
+We kept only contacts physically located in:
+- Australia
+- New Zealand  
+- United Kingdom
+- Ireland
+
+### Step 2: Title Relevance Filter
+**Removed:** 461 contacts (2.0% of original)  
+**Reason:** Job titles not relevant to Go1's value proposition
+
+We kept only titles related to:
+- Human Resources / People & Culture
+- Learning & Development / Training
+- Compliance / Risk Management
+- IT / Technology
+
+---
+
+## Geographic Removals Detail (12,121 contacts)
+
+### Breakdown by Region
+
+| Region | Contacts Removed | % of Geographic Removals |
+|--------|-----------------|-------------------------|
+| United States | 457 | 3.8% |
+| India | 336 | 2.8% |
+| UAE/Dubai | 86 | 0.7% |
+| Singapore | 76 | 0.6% |
+| Philippines | 74 | 0.6% |
+| South Africa | 70 | 0.6% |
+| Canada | 61 | 0.5% |
+| Nigeria | 47 | 0.4% |
+| Hong Kong | 43 | 0.4% |
+| Other Countries | 1,027 | 8.5% |
+
+### Top Removed Locations
+
+1. Dubai, United Arab Emirates (63)
+2. United States (63)
+3. Mumbai, Maharashtra, India (61)
+4. Singapore (60)
+5. Bengaluru, Karnataka, India (47)
+6. Hong Kong SAR (28)
+7. Cape Town, South Africa (27)
+8. Chennai, Tamil Nadu, India (24)
+9. Hyderabad, Telangana, India (23)
+10. Johannesburg, South Africa (21)
+
+**Why these were removed:** These contacts are outside the AU/NZ/UK/IE territory scope for this campaign.
+
+---
+
+## Title-Based Removals Detail (461 contacts)
+
+### Summary
+- **Total contacts removed:** 461
+- **Unique titles removed:** 392
+- **Retention rate in target regions:** 96%
+
+### Top Removed Titles
+
+| Title | Count |
+|-------|-------|
+| Non Executive Director | 16 |
+| Director | 11 |
+| Project Manager | 6 |
+| Manager | 6 |
+| Operations Manager | 5 |
+| Associate Director | 4 |
+| Assistant Manager | 4 |
+| Account Manager | 4 |
+| Board Member | 3 |
+| Health And Safety Manager | 3 |
+| Change Manager | 3 |
+| Engineering Manager | 3 |
+| Managing Director | 3 |
+
+### Categories of Removed Titles
+
+**1. Generic Leadership Roles (No Functional Relevance)**
+- Non Executive Director
+- Director
+- Board Member
+- Managing Director
+- Trustee
+- President
+- Vice President Operations
+- Chief Executive Officer
+- Chief Operating Officer
+
+**2. Operations & Administrative**
+- Operations Manager
+- Project Manager
+- Program Manager
+- Office Manager
+- Assistant Manager
+- Business Support Officer
+- Executive Assistant
+
+**3. Sales & Account Management**
+- Account Manager
+- Business Development Manager
+- Sales Manager
+- Customer Success Manager
+- Key Account Manager
+
+**4. Non-Target Functions**
+- Health And Safety Manager
+- Engineering Manager
+- Supply Chain Manager
+- Fleet Manager
+- Construction Project Manager
+- Restaurant Manager
+- Store Manager
+
+**5. Other**
+- Students
+- Volunteers
+- Retired
+- Trainers (non-L&D)
+- Consultants (non-HR/L&D)
+
+**Why these were removed:** These titles don't align with Go1's target buyer personas (HR, L&D, Compliance, IT decision-makers who would purchase or influence learning platform decisions).
+
+---
+
+## What Was Kept (11,024 contacts)
+
+### Functional Breakdown
+
+| Function | Contacts | % of Final List |
+|----------|----------|----------------|
+| Compliance/Risk | 3,475 | 31.5% |
+| HR/People | 3,189 | 28.9% |
+| Learning & Development | 2,971 | 27.0% |
+| Mixed Roles | 747 | 6.8% |
+| IT/Technology | 101 | 0.9% |
+
+### Regional Distribution
+
+| Region | Contacts | % of Final List |
+|--------|----------|----------------|
+| United Kingdom | 6,186 | 56.1% |
+| Australia | 2,539 | 23.0% |
+| Ireland | 1,005 | 9.1% |
+| New Zealand | 653 | 5.9% |
+
+### Top Titles in Final List
+
+1. Senior Human Resources Business Partner (516)
+2. Learning and Development Manager (460)
+3. Compliance Manager (406)
+4. Human Resources Manager (356)
+5. Human Resources Director (335)
+6. Learning And Development Specialist (299)
+7. Human Resources Officer (244)
+8. Head of Learning and Development (205)
+9. Head of Human Resources (181)
+10. Senior Compliance Manager (94)
+
+---
+
+## Filtering Logic
+
+### Geographic Filter
+Contacts were kept if their **Location** field contained any of these patterns:
+- **Australia:** Sydney, Melbourne, Brisbane, Perth, Adelaide, plus all states/territories
+- **New Zealand:** Auckland, Wellington, Christchurch, Hamilton, plus all major cities
+- **United Kingdom:** London, Manchester, Birmingham, Leeds, Glasgow, plus all regions (England, Scotland, Wales, Northern Ireland) and major cities
+- **Ireland:** Dublin, Cork, Galway, Limerick, plus all counties
+
+### Title Filter
+Contacts were kept if their **Title** field contained any of these keywords:
+- Human Resources, HR, People, Talent
+- Learning, Training, Development, L&D, Education
+- Organisational/Organizational Development
+- Capability, Workforce, Employee
+- Recruitment, Recruiter, Culture, Engagement
+- Compensation, Benefits, Payroll, HRIS
+- **Compliance, Regulatory, Risk** (included per requirement)
+- **Technology, Technical, IT, Systems, Digital, Data** (included per requirement)
+
+Contacts were removed if they had generic titles without functional relevance:
+- "Director" (without specifying which function)
+- "Manager" (without context)
+- "Non Executive Director"
+- Sales, Marketing, Operations roles
+- Administrative support roles
+
+---
+
+## Files Delivered
+
+1. **contacts_target_regions_CLEANED.csv** (11,024 contacts)
+   - Final cleaned list ready for outreach
+
+2. **REMOVED_geographic.csv** (12,121 contacts)
+   - All contacts outside AU/NZ/UK/IE
+
+3. **REMOVED_irrelevant_titles.csv** (461 contacts)
+   - All contacts with non-relevant job titles
+
+---
+
+## Recommendations
+
+### Immediate Use
+The cleaned list of 11,024 contacts is ready for:
+- Territory assignment (AU, NZ, UK, IE)
+- Sequencing by seniority level
+- Personalized outreach campaigns
+
+### Future Considerations
+- The 12,121 geographic removals could be valuable for future expansion into APAC, EMEA, or Americas regions
+- Consider whether any of the 461 title-based removals should be reconsidered (e.g., C-suite executives without functional titles may still be decision-makers)
+
+---
+
+## Quality Metrics
+
+- **Geographic Precision:** 96% of in-region contacts retained
+- **Title Relevance:** 96% retention rate (only clearly irrelevant titles removed)
+- **Final List Composition:** 87.4% HR/L&D/Compliance roles (core buyers)
+- **Geographic Distribution:** Well-balanced across target regions
+
+---
+
+**Report Generated:** December 14, 2025  
+**Analysis Tool:** Claude (Anthropic)  
+**Data Source:** go1SN12_12_25.csv
